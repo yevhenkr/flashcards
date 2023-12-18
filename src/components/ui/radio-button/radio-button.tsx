@@ -4,10 +4,10 @@ export type ButtonProps<T extends ElementType = 'button'> = {
   as?: T
   fullWidth?: boolean
   isDisabled?: boolean
-  variant?: 'link' | 'primary' | 'secondary' | 'tertiary'
+  variant?: 'off' | 'on'
 } & ComponentPropsWithoutRef<T>
 
-import s from './button.module.scss'
+import s from './radio-button.module.scss'
 
 export const Button = <T extends ElementType = 'button'>(
   props: ButtonProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof ButtonProps<T>>
@@ -17,17 +17,12 @@ export const Button = <T extends ElementType = 'button'>(
     children,
     className,
     fullWidth,
-    isDisabled,
-    variant = 'primary',
+    variant = 'select',
     ...rest
   } = props
 
   return (
-    <Component
-      className={`${s.button} ${s[variant]} ${fullWidth ? s.fullWidth : ''} ${className}`}
-      disabled={isDisabled}
-      {...rest}
-    >
+    <Component className={`${s.radioButton} ${s[variant]} ${className}`} {...rest}>
       {children}
     </Component>
   )

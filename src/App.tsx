@@ -1,4 +1,6 @@
 import { Button } from '@/components/ui/button'
+import RadioGroupDemo from '@/components/ui/radio-button/radio-group-demo'
+
 const linkHref = 'https://www.google.com/'
 
 export function App() {
@@ -14,6 +16,7 @@ export function App() {
       >
         Primery Button
       </Button>
+      <RadioGroupDemo isDisabled />
     </div>
   )
 }

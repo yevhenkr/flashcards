@@ -2,7 +2,7 @@ import * as React from 'react'
 
 interface SvgComponentProps {}
 
-const SVGIconEnter: React.FC<SvgComponentProps> = props => (
+const RadioButtonSvg: React.FC<SvgComponentProps> = props => (
   <svg fill={'none'} height={16} width={16} xmlns={'http://www.w3.org/2000/svg'} {...props}>
     <path
       d={
@@ -13,4 +13,4 @@ const SVGIconEnter: React.FC<SvgComponentProps> = props => (
   </svg>
 )
 
-export default SVGIconEnter
+export default RadioButtonSvg
