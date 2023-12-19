@@ -74,7 +74,7 @@
   }
 }
 
-.RadioAllItem {
+.radioAllItem {
   display: flex;
   flex-direction: row;
   column-gap: 2px;
@@ -87,7 +87,7 @@
   letter-spacing: 0;
 }
 
-.RadioGroupItem {
+.radioGroupItem {
   all: unset;
 
   display: flex;
@@ -101,14 +101,14 @@
   border-radius: 50%;
 }
 
-.RadioGroupItem:active {
+.radioGroupItem:active {
   background-color: var(--color-accent-900);
 }
 
-.RadioGroupItem:hover {
+.radioGroupItem:hover {
   background-color: var(--color-dark-500);
 }
 
-.RadioGroupItem:focus {
+.radioGroupItem:focus {
   background-color: var(--color-dark-700);
 }

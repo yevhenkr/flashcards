@@ -37,20 +37,20 @@ export const RadioButtons = (props: RadioButtonProps) => {
         orientation={'vertical'}
         value={selectedOption}
       >
-        <div className={s.RadioAllItem}>
-          <RadioGroup.Item className={s.RadioGroupItem} value={'option1'}>
+        <div className={s.radioAllItem}>
+          <RadioGroup.Item className={s.radioGroupItem} value={'option1'}>
             {renderRadioButton(selectedOption, 'option1', props.isDisabled)}
           </RadioGroup.Item>
           <label>RadioGroup</label>
         </div>
-        <div className={s.RadioAllItem}>
-          <RadioGroup.Item className={s.RadioGroupItem} value={'option2'}>
+        <div className={s.radioAllItem}>
+          <RadioGroup.Item className={s.radioGroupItem} value={'option2'}>
             {renderRadioButton(selectedOption, 'option2', props.isDisabled)}
           </RadioGroup.Item>
           <label>RadioGroup</label>
         </div>
-        <div className={s.RadioAllItem}>
-          <RadioGroup.Item className={s.RadioGroupItem} value={'option3'}>
+        <div className={s.radioAllItem}>
+          <RadioGroup.Item className={s.radioGroupItem} value={'option3'}>
             {renderRadioButton(selectedOption, 'option3', props.isDisabled)}
           </RadioGroup.Item>
           <label>RadioGroup</label>
