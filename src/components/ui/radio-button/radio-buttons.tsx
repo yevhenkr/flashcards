@@ -12,7 +12,7 @@ export type RadioButtonProps = {
   variant?: 'off' | 'on'
 }
 
-const RadioGroupDemo = (props: RadioButtonProps) => {
+export const RadioButtons = (props: RadioButtonProps) => {
   const [selectedOption, setSelectedOption] = useState<string>('option1')
 
   const handleChange = (value: string) => {
@@ -31,13 +31,14 @@ const RadioGroupDemo = (props: RadioButtonProps) => {
 
   return (
     <form>
-      <RadioGroup.Root onValueChange={handleChange} orientation={'vertical'} value={selectedOption}>
+      <RadioGroup.Root
+        disabled={props.isDisabled}
+        onValueChange={handleChange}
+        orientation={'vertical'}
+        value={selectedOption}
+      >
         <div className={'RadioAllItem'}>
-          <RadioGroup.Item
-            className={'RadioGroupItem'}
-            disabled={props.isDisabled}
-            value={'option1'}
-          >
+          <RadioGroup.Item className={'RadioGroupItem'} value={'option1'}>
             {renderRadioButton(selectedOption, 'option1', props.isDisabled)}
           </RadioGroup.Item>
           <label>RadioGroup</label>
@@ -59,4 +60,4 @@ const RadioGroupDemo = (props: RadioButtonProps) => {
   )
 }
 
-export default RadioGroupDemo
+export default RadioButtons

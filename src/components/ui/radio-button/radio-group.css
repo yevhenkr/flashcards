@@ -26,9 +26,6 @@ button {
   letter-spacing: 0;
 }
 
-.RadioAllItem > button > svg {
-}
-
 .RadioGroupItem {
   display: flex;
   align-items: center;
