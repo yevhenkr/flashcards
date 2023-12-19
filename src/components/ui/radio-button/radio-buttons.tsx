@@ -3,7 +3,7 @@ import { useState } from 'react'
 import UnSelectRadioButtonSvg from '@/components/ui/radio-button/UnSelectRadioButtonSvg'
 import * as RadioGroup from '@radix-ui/react-radio-group'
 
-import './radio-group.css'
+import s from './radio-button.module.scss'
 
 import RadioButtonSvg from './RadioButtonSvg'
 
@@ -25,7 +25,7 @@ export const RadioButtons = (props: RadioButtonProps) => {
     if (selectedValue !== thisOption) {
       return <UnSelectRadioButtonSvg fillColor={fillColor} />
     } else {
-      return <RadioButtonSvg className={'SVGRadioButton'} fillColor={fillColor} />
+      return <RadioButtonSvg fillColor={fillColor} />
     }
   }
 
@@ -37,20 +37,20 @@ export const RadioButtons = (props: RadioButtonProps) => {
         orientation={'vertical'}
         value={selectedOption}
       >
-        <div className={'RadioAllItem'}>
-          <RadioGroup.Item className={'RadioGroupItem'} value={'option1'}>
+        <div className={s.RadioAllItem}>
+          <RadioGroup.Item className={s.RadioGroupItem} value={'option1'}>
             {renderRadioButton(selectedOption, 'option1', props.isDisabled)}
           </RadioGroup.Item>
           <label>RadioGroup</label>
         </div>
-        <div className={'RadioAllItem'}>
-          <RadioGroup.Item className={'RadioGroupItem'} value={'option2'}>
+        <div className={s.RadioAllItem}>
+          <RadioGroup.Item className={s.RadioGroupItem} value={'option2'}>
             {renderRadioButton(selectedOption, 'option2', props.isDisabled)}
           </RadioGroup.Item>
           <label>RadioGroup</label>
         </div>
-        <div className={'RadioAllItem'}>
-          <RadioGroup.Item className={'RadioGroupItem'} value={'option3'}>
+        <div className={s.RadioAllItem}>
+          <RadioGroup.Item className={s.RadioGroupItem} value={'option3'}>
             {renderRadioButton(selectedOption, 'option3', props.isDisabled)}
           </RadioGroup.Item>
           <label>RadioGroup</label>
