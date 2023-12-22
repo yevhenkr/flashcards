@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import RadioButtons from '@/components/ui/radio-button/radio-buttons'
+import RadioButtons from '@/components/ui/radio-buttons/radio-buttons'
 
 const linkHref = 'https://www.google.com/'
 
