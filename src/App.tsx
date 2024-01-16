@@ -1,5 +1,5 @@
 import { LoginForm } from '@/components/auth/login-form/login-form'
-import { RadioGroup } from '@/components/ui/radio-group'
+import { RadioGroup } from '@/components/ui/radio-group/index'
 
 //
 // const linkHref = 'https://www.google.com/'
@@ -19,7 +19,13 @@ export function App() {
       {/*</Button>*/}
       {/*<RadioGroup isDisabled={false} />*/}
       <LoginForm />
-      <RadioGroup isDisabled={false} variant={'on'} />
+      <RadioGroup
+        option={[
+          { isDisabled: false, name: 'Option1', value: 1 },
+          { isDisabled: false, name: 'Option2', value: 1 },
+        ]}
+        variant={'Enable'}
+      />
     </div>
   )
 }
