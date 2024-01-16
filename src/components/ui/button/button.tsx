@@ -8,7 +8,8 @@ export type ButtonProps<T extends ElementType = 'button'> = {
 } & ComponentPropsWithoutRef<T>
 
 import s from './button.module.scss'
-
+// Button({as:'a'})
+// <Button as="a"/>
 export const Button = <T extends ElementType = 'button'>(
   props: ButtonProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof ButtonProps<T>>
 ) => {

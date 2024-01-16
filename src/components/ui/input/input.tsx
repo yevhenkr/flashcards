@@ -1,12 +1,13 @@
 import { ComponentPropsWithoutRef, forwardRef, useState } from 'react'
 
 import { IconClose, IconEye, IconSearch } from '@/assets'
-import { Typography } from '@/components/ui/typography'
 import cx from 'clsx'
 
 import s from './input.module.scss'
 
-type InputProps = {
+import { Typography } from '../../typography'
+
+export type InputProps = {
   clearInput?: () => void
   error?: string
   label?: string
