@@ -1,7 +1,6 @@
 import { LoginForm } from '@/components/auth/login-form/login-form'
-import { RadioButtons } from '@/components/ui/radio-buttons'
-// import { Button } from '@/components/ui/button'
-// import RadioButtons from '@/components/ui/radio-buttons/radio-buttons'
+import { RadioGroup } from '@/components/ui/radio-group'
+
 //
 // const linkHref = 'https://www.google.com/'
 
@@ -18,9 +17,9 @@ export function App() {
       {/*>*/}
       {/*  Primery Button*/}
       {/*</Button>*/}
-      {/*<RadioButtons isDisabled={false} />*/}
+      {/*<RadioGroup isDisabled={false} />*/}
       <LoginForm />
-      <RadioButtons isDisabled={false} variant={'on'} />
+      <RadioGroup isDisabled={false} variant={'on'} />
     </div>
   )
 }

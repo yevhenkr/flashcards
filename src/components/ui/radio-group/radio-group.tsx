@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import UnSelectRadioButtonSvg from '@/components/ui/radio-buttons/UnSelectRadioButtonSvg'
-import * as RadioGroup from '@radix-ui/react-radio-group'
+import UnSelectRadioButtonSvg from '@/components/ui/radio-group/UnSelectRadioButtonSvg'
+import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
 
-import s from './radio-button.module.scss'
+import s from './radio-group.module.scss'
 
 import RadioButtonSvg from './RadioButtonSvg'
 
@@ -12,7 +12,7 @@ export type RadioButtonProps = {
   variant?: 'off' | 'on'
 }
 
-export const RadioButtons = (props: RadioButtonProps) => {
+export const RadioGroup = (props: RadioButtonProps) => {
   const [selectedOption, setSelectedOption] = useState<string>('option1')
 
   const handleChange = (value: string) => {
@@ -31,33 +31,31 @@ export const RadioButtons = (props: RadioButtonProps) => {
 
   return (
     <form>
-      <RadioGroup.Root
+      <RadioGroupPrimitive.Root
         disabled={props.isDisabled}
         onValueChange={handleChange}
         orientation={'vertical'}
         value={selectedOption}
       >
         <div className={s.radioAllItem}>
-          <RadioGroup.Item className={s.radioGroupItem} value={'option1'}>
+          <RadioGroupPrimitive.Item className={s.radioGroupItem} value={'option1'}>
             {renderRadioButton(selectedOption, 'option1', props.isDisabled)}
-          </RadioGroup.Item>
+          </RadioGroupPrimitive.Item>
           <label>RadioGroup</label>
         </div>
         <div className={s.radioAllItem}>
-          <RadioGroup.Item className={s.radioGroupItem} value={'option2'}>
+          <RadioGroupPrimitive.Item className={s.radioGroupItem} value={'option2'}>
             {renderRadioButton(selectedOption, 'option2', props.isDisabled)}
-          </RadioGroup.Item>
+          </RadioGroupPrimitive.Item>
           <label>RadioGroup</label>
         </div>
         <div className={s.radioAllItem}>
-          <RadioGroup.Item className={s.radioGroupItem} value={'option3'}>
+          <RadioGroupPrimitive.Item className={s.radioGroupItem} value={'option3'}>
             {renderRadioButton(selectedOption, 'option3', props.isDisabled)}
-          </RadioGroup.Item>
+          </RadioGroupPrimitive.Item>
           <label>RadioGroup</label>
         </div>
-      </RadioGroup.Root>
+      </RadioGroupPrimitive.Root>
     </form>
   )
 }
-
-export default RadioButtons
