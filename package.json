@@ -26,6 +26,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.49.2",
     "react-radio-group": "^3.0.3",
+    "valibot": "^0.26.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
