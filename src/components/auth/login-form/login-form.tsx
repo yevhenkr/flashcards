@@ -4,16 +4,16 @@ import { Button } from '@/components/ui/button'
 import { ControlledCheckbox } from '@/components/ui/controlled/controlled-checkbox'
 import { ControlledTextField } from '@/components/ui/controlled/controlled-text-field'
 import { DevTool } from '@hookform/devtools'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
+import { valibotResolver } from '@hookform/resolvers/valibot'
+import { Output, boolean, email, minLength, object, string } from 'valibot'
 
-const loginSchema = z.object({
-  email: z.string().email({ message: 'Invalid email address' }).or(z.literal('')),
-  password: z.string().min(3, { message: 'Too short password' }).or(z.literal('')),
-  rememberMe: z.literal(true),
+const loginSchema = object({
+  email: string([email()]),
+  password: string([minLength(8)]),
+  rememberMe: boolean(),
 })
 
-type FormValues = z.infer<typeof loginSchema>
+type FormValues = Output<typeof loginSchema>
 
 export const LoginForm = () => {
   const {
@@ -22,7 +22,7 @@ export const LoginForm = () => {
     handleSubmit,
   } = useForm<FormValues>({
     defaultValues: { email: '', password: '', rememberMe: true },
-    resolver: zodResolver(loginSchema),
+    resolver: valibotResolver(loginSchema),
   })
 
   const onSubmit = (data: FormValues) => {
