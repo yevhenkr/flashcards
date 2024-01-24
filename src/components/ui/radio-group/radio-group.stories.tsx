@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 
-import { RadioButtonProps, RadioButtons } from './'
+import { RadioButtonProps, RadioGroup } from './'
 
 const meta = {
   argTypes: {
@@ -8,24 +8,24 @@ const meta = {
       control: { type: 'radio' },
     },
   },
-  component: RadioButtons,
+  component: RadioGroup,
   tags: ['autodocs'],
   title: 'Components/RadioGroupDemo',
-} satisfies Meta<typeof RadioButtons>
+} satisfies Meta<typeof RadioGroup>
 
 export default meta
 
-const Template: Story<RadioButtonProps> = args => <RadioButtons {...args} />
+const Template: Story<RadioButtonProps> = args => <RadioGroup {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  isDisabled: false,
+  // isDisabled: false,
   // You can provide additional props as needed
 }
 
 export const Disabled = Template.bind({})
 Disabled.args = {
-  isDisabled: true,
+  // isDisabled: true,
   // You can provide additional props as needed
 }
 
