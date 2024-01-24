@@ -17,6 +17,7 @@ export const TypographyVariant = [
   'overline',
   'span',
   'subtitle1',
+  'error',
   'subtitle2',
 ] as const
 

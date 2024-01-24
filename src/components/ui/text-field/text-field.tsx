@@ -1,7 +1,7 @@
 import { ChangeEvent, ComponentProps, ComponentPropsWithoutRef, forwardRef, useState } from 'react'
 
 import { IconEye, IconSearch, VisibilityOff } from '@/assets'
-import { Typography } from '@/components/typography'
+import { Typography } from '@/components/ui/typography'
 import { clsx } from 'clsx'
 
 import s from './text-field.module.scss'

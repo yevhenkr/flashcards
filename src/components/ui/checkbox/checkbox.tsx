@@ -1,7 +1,7 @@
 import { ElementRef, forwardRef } from 'react'
 
 import { CheckBoxIcon } from '@/assets/icons/checkBoxIcon'
-import { Typography } from '@/components/typography'
+import { Typography } from '@/components/ui/typography'
 import * as CheckboxRadix from '@radix-ui/react-checkbox'
 import * as LabelRadix from '@radix-ui/react-label'
 import { clsx } from 'clsx'

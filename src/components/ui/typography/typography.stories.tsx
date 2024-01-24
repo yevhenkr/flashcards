@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Typography, TypographyVariant } from './'
+import { Typography } from './index'
 
 const meta = {
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: TypographyVariant,
+      options: ['h1', 'h2', 'h3', 'h4'],
     },
   },
   component: Typography,
