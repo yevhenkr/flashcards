@@ -26,7 +26,6 @@ export const RadioGroup = (props: RadioButtonProps) => {
   const renderRadioButton = (selectedValue: string, thisOption: string, isDisabled: boolean) => {
     const fillColor = isDisabled ? `var(--color-primary-900)` : `var(--color-primary-500)`
 
-    debugger
     if (selectedValue !== thisOption) {
       return <UnSelectRadioButtonSvg fillColor={fillColor} />
     } else {
