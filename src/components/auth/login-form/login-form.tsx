@@ -33,6 +33,7 @@ export const LoginForm = () => {
     <>
       <DevTool control={control} />
       <form onSubmit={handleSubmit(onSubmit)}>
+        <DevTool control={control} />
         <ControlledTextField
           control={control}
           errorMessage={errors.email?.message}
